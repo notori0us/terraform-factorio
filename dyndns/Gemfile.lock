@@ -1,0 +1,35 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    aws-eventstream (1.2.0)
+    aws-partitions (1.503.0)
+    aws-sdk-core (3.121.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+      aws-partitions (~> 1, >= 1.239.0)
+      aws-sigv4 (~> 1.1)
+      jmespath (~> 1.0)
+    aws-sdk-route53 (1.55.0)
+      aws-sdk-core (~> 3, >= 3.120.0)
+      aws-sigv4 (~> 1.1)
+    aws-sigv4 (1.4.0)
+      aws-eventstream (~> 1, >= 1.0.2)
+    httparty (0.19.0)
+      mime-types (~> 3.0)
+      multi_xml (>= 0.5.2)
+    jmespath (1.4.0)
+    mime-types (3.3.1)
+      mime-types-data (~> 3.2015)
+    mime-types-data (3.2021.0901)
+    multi_xml (0.6.0)
+
+PLATFORMS
+  aarch64-linux
+  arm64-darwin-20
+  x86_64-linux
+
+DEPENDENCIES
+  aws-sdk-route53 (~> 1.55)
+  httparty (~> 0.19.0)
+
+BUNDLED WITH
+   2.2.22
