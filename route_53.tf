@@ -1,5 +1,5 @@
 data "aws_route53_zone" "selected" {
-  name = "chriswallace.io"
+  name = var.domain
 }
 
 resource "aws_route53_record" "factorio" {
