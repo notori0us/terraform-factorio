@@ -6,6 +6,10 @@ variable "domain" {
   default = "chriswallace.io"
 }
 
+variable "subdomain" {
+  default = "factorio"
+}
+
 variable "aws_access_key_id" {
   type        = string
   description = "An AWS IAM access key ID which terraform will use to access AWS on your behalf to manage resources"
