@@ -10,8 +10,9 @@ terraform {
 }
 
 provider "aws" {
-  profile = "personal"
-  region  = "us-west-2"
+  region     = "us-west-2"
+  access_key = var.aws_access_key_id
+  secret_key = var.aws_secret_key
 }
 
 data "aws_region" "current" {}
