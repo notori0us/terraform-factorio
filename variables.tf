@@ -2,6 +2,15 @@ variable "image" {
   default = "factoriotools/factorio:stable"
 }
 
+variable "desired_container_count" {
+  default = 1
+  type    = number
+  validation {
+    condition     = var.desired_container_count == 0 || var.desired_container_count == 1
+    error_message = "Only values of 0 or 1 are supported"
+  }
+}
+
 variable "domain" {
   default = "chriswallace.io"
 }

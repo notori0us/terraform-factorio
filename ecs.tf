@@ -8,7 +8,7 @@ resource "aws_ecs_service" "factorio" {
   launch_type      = "FARGATE"
   name             = "factorio"
   task_definition  = aws_ecs_task_definition.factorio.arn
-  desired_count    = 1
+  desired_count    = var.desired_container_count #should be 0 or 1
 
   network_configuration {
     subnets          = module.vpc.public_subnets
@@ -36,6 +36,7 @@ resource "aws_ecs_task_definition" "factorio" {
     }
   }
 
+  # https://docs.aws.amazon.com/AmazonECS/latest/developerguide/AWS_Fargate.html#fargate-task-defs
   container_definitions = jsonencode([
     {
       cpu       = 0
