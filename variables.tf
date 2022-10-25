@@ -14,4 +14,5 @@ variable "aws_access_key_id" {
 variable "aws_secret_key" {
   type        = string
   description = "The secret key of the IAM access keypair used in the previous variable"
+  sensitive   = true
 }
