@@ -2,11 +2,18 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 3.27"
+      version = "~> 5.0"
     }
   }
 
-  required_version = ">= 1.0.0"
+  backend "remote" {
+      hostname = "app.terraform.io"
+      organization = "notori0us"
+
+      workspaces {
+          name = "terraform-factorio"
+      }
+  }
 }
 
 provider "aws" {
